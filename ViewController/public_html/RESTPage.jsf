@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="RESTPage.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelCollection id="pc1">
+                <f:facet name="menus"/>
+                <f:facet name="toolbar"/>
+                <f:facet name="statusbar"/>
+                <af:table value="#{bindings.items.collectionModel}" var="row" rows="#{bindings.items.rangeSize}"
+                          emptyText="#{bindings.items.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          rowBandingInterval="0" selectedRowKeys="#{bindings.items.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.items.collectionModel.makeCurrent}" rowSelection="single"
+                          filterModel="#{bindings.itemsQuery.queryDescriptor}" filterVisible="true"
+                          queryListener="#{bindings.itemsQuery.processQuery}" varStatus="vs" id="t1" scrollPolicy="page"
+                          fetchSize="25">
+                    <af:column sortProperty="#{bindings.items.hints.PersonId.name}" filterable="true" sortable="true"
+                               headerText="#{bindings.items.hints.PersonId.label}" id="c25">
+                        <af:outputText value="#{row.PersonId}" shortDesc="#{bindings.items.hints.PersonId.tooltip}"
+                                       id="ot25">
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.items.hints.PersonId.format}"/>
+                        </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.items.hints.NationalIdType.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.items.hints.NationalIdType.label}" id="c9">
+                        <af:outputText value="#{row.NationalIdType}"
+                                       shortDesc="#{bindings.items.hints.NationalIdType.tooltip}" id="ot9"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.items.hints.CreationDate.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.items.hints.CreationDate.label}" id="c2">
+                        <af:outputText value="#{row.CreationDate}"
+                                       shortDesc="#{bindings.items.hints.CreationDate.tooltip}" id="ot2"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.items.hints.LastName.name}" filterable="true" sortable="true"
+                               headerText="#{bindings.items.hints.LastName.label}" id="c32">
+                        <af:outputText value="#{row.LastName}" shortDesc="#{bindings.items.hints.LastName.tooltip}"
+                                       id="ot32"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.items.hints.MilitaryVetStatus.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.items.hints.MilitaryVetStatus.label}" id="c33">
+                        <af:outputText value="#{row.MilitaryVetStatus}"
+                                       shortDesc="#{bindings.items.hints.MilitaryVetStatus.tooltip}" id="ot33"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.items.hints.WorkPhoneNumber.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.items.hints.WorkPhoneNumber.label}" id="c34">
+                        <af:outputText value="#{row.WorkPhoneNumber}"
+                                       shortDesc="#{bindings.items.hints.WorkPhoneNumber.tooltip}" id="ot34"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.items.hints.Salutation.name}" filterable="true" sortable="true"
+                               headerText="#{bindings.items.hints.Salutation.label}" id="c41">
+                        <af:outputText value="#{row.Salutation}" shortDesc="#{bindings.items.hints.Salutation.tooltip}"
+                                       id="ot41"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.items.hints.LegalEntityId.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.items.hints.LegalEntityId.label}" id="c45">
+                        <af:outputText value="#{row.LegalEntityId}"
+                                       shortDesc="#{bindings.items.hints.LegalEntityId.tooltip}" id="ot45">
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.items.hints.LegalEntityId.format}"/>
+                        </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.items.hints.DisplayName.name}" filterable="true" sortable="true"
+                               headerText="#{bindings.items.hints.DisplayName.label}" id="c46">
+                        <af:outputText value="#{row.DisplayName}"
+                                       shortDesc="#{bindings.items.hints.DisplayName.tooltip}" id="ot46"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.items.hints.PersonNumber.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.items.hints.PersonNumber.label}" id="c53">
+                        <af:outputText value="#{row.PersonNumber}"
+                                       shortDesc="#{bindings.items.hints.PersonNumber.tooltip}" id="ot53"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.items.hints.UserName.name}" filterable="true" sortable="true"
+                               headerText="#{bindings.items.hints.UserName.label}" id="c54">
+                        <af:outputText value="#{row.UserName}" shortDesc="#{bindings.items.hints.UserName.tooltip}"
+                                       id="ot54"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.items.hints.FirstName.name}" filterable="true" sortable="true"
+                               headerText="#{bindings.items.hints.FirstName.label}" id="c55">
+                        <af:outputText value="#{row.FirstName}" shortDesc="#{bindings.items.hints.FirstName.tooltip}"
+                                       id="ot55"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.items.hints.NationalId.name}" filterable="true" sortable="true"
+                               headerText="#{bindings.items.hints.NationalId.label}" id="c58">
+                        <af:outputText value="#{row.NationalId}" shortDesc="#{bindings.items.hints.NationalId.tooltip}"
+                                       id="ot58"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.items.hints.WorkEmail.name}" filterable="true" sortable="true"
+                               headerText="#{bindings.items.hints.WorkEmail.label}" id="c63">
+                        <af:outputText value="#{row.WorkEmail}" shortDesc="#{bindings.items.hints.WorkEmail.tooltip}"
+                                       id="ot63"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.items.hints.MiddleName.name}" filterable="true" sortable="true"
+                               headerText="#{bindings.items.hints.MiddleName.label}" id="c65">
+                        <af:outputText value="#{row.MiddleName}" shortDesc="#{bindings.items.hints.MiddleName.tooltip}"
+                                       id="ot65"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.items.hints.EffectiveStartDate.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.items.hints.EffectiveStartDate.label}" id="c71">
+                        <af:outputText value="#{row.EffectiveStartDate}"
+                                       shortDesc="#{bindings.items.hints.EffectiveStartDate.tooltip}" id="ot71"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.items.hints.ReligionId.name}" filterable="true" sortable="true"
+                               headerText="#{bindings.items.hints.ReligionId.label}" id="c72">
+                        <af:outputText value="#{row.ReligionId}" shortDesc="#{bindings.items.hints.ReligionId.tooltip}"
+                                       id="ot72"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.items.hints.LastUpdateDate.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.items.hints.LastUpdateDate.label}" id="c73">
+                        <af:outputText value="#{row.LastUpdateDate}"
+                                       shortDesc="#{bindings.items.hints.LastUpdateDate.tooltip}" id="ot73"/>
+                    </af:column>
+                </af:table>
+            </af:panelCollection>
+        </af:form>
+    </af:document>
+</f:view>

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.2" id="untitled1PageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <methodIterator Binds="getAllEmployees.result" DataControl="EmpRest" RangeSize="25"
+                    BeanClass="model.EmpRest.getAllEmployees_Data_methodReturn" id="getAllEmployeesIterator"/>
+    <accessorIterator MasterBinding="getAllEmployeesIterator" Binds="items" RangeSize="25" DataControl="EmpRest"
+                      BeanClass="model.EmpRest.getAllEmployees_Data_methodReturn_items" id="itemsIterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="getAllEmployees" RequiresUpdateModel="true" Action="invokeMethod" MethodName="getAllEmployees"
+                  IsViewObjectMethod="false" DataControl="EmpRest" InstanceName="bindings.getAllEmployees.dataControl"
+                  ReturnName="data.EmpRest.methodResults.getAllEmployees_getAllEmployees_dataControl_getAllEmployees_result"/>
+    <attributeValues IterBinding="itemsIterator" id="CitizenshipToDate">
+      <AttrNames>
+        <Item Value="CitizenshipToDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="CreationDate">
+      <AttrNames>
+        <Item Value="CreationDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="WorkFaxCountryCode">
+      <AttrNames>
+        <Item Value="WorkFaxCountryCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="LicenseNumber">
+      <AttrNames>
+        <Item Value="LicenseNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="PassportIssuingCountry">
+      <AttrNames>
+        <Item Value="PassportIssuingCountry"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="PassportId">
+      <AttrNames>
+        <Item Value="PassportId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="Gender">
+      <AttrNames>
+        <Item Value="Gender"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="PassportExpirationDate">
+      <AttrNames>
+        <Item Value="PassportExpirationDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="NationalIdType">
+      <AttrNames>
+        <Item Value="NationalIdType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="HireDate">
+      <AttrNames>
+        <Item Value="HireDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="NameSuffix">
+      <AttrNames>
+        <Item Value="NameSuffix"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="CitizenshipStatus">
+      <AttrNames>
+        <Item Value="CitizenshipStatus"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="HomeFaxExtension">
+      <AttrNames>
+        <Item Value="HomeFaxExtension"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="DateOfBirth">
+      <AttrNames>
+        <Item Value="DateOfBirth"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="WorkPhoneExtension">
+      <AttrNames>
+        <Item Value="WorkPhoneExtension"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="HomePhoneAreaCode">
+      <AttrNames>
+        <Item Value="HomePhoneAreaCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="PreviousLastName">
+      <AttrNames>
+        <Item Value="PreviousLastName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="WorkFaxExtension">
+      <AttrNames>
+        <Item Value="WorkFaxExtension"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="City">
+      <AttrNames>
+        <Item Value="City"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="WorkFaxAreaCode">
+      <AttrNames>
+        <Item Value="WorkFaxAreaCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="AddressLine3">
+      <AttrNames>
+        <Item Value="AddressLine3"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="AddressLine2">
+      <AttrNames>
+        <Item Value="AddressLine2"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="MaritalStatus">
+      <AttrNames>
+        <Item Value="MaritalStatus"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="AddressLine1">
+      <AttrNames>
+        <Item Value="AddressLine1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="PersonId">
+      <AttrNames>
+        <Item Value="PersonId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="NationalIdCountry">
+      <AttrNames>
+        <Item Value="NationalIdCountry"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="DriversLicenseExpirationDate">
+      <AttrNames>
+        <Item Value="DriversLicenseExpirationDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="Region">
+      <AttrNames>
+        <Item Value="Region"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="Country">
+      <AttrNames>
+        <Item Value="Country"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="CitizenshipLegislationCode">
+      <AttrNames>
+        <Item Value="CitizenshipLegislationCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="PassportNumber">
+      <AttrNames>
+        <Item Value="PassportNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="LastName">
+      <AttrNames>
+        <Item Value="LastName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="MilitaryVetStatus">
+      <AttrNames>
+        <Item Value="MilitaryVetStatus"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="WorkPhoneNumber">
+      <AttrNames>
+        <Item Value="WorkPhoneNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="Honors">
+      <AttrNames>
+        <Item Value="Honors"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="HomePhoneExtension">
+      <AttrNames>
+        <Item Value="HomePhoneExtension"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="PostalCode">
+      <AttrNames>
+        <Item Value="PostalCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="NationalIdExpirationDate">
+      <AttrNames>
+        <Item Value="NationalIdExpirationDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="ProjectedTerminationDate">
+      <AttrNames>
+        <Item Value="ProjectedTerminationDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="CorrespondenceLanguage">
+      <AttrNames>
+        <Item Value="CorrespondenceLanguage"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="Salutation">
+      <AttrNames>
+        <Item Value="Salutation"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="WorkPhoneAreaCode">
+      <AttrNames>
+        <Item Value="WorkPhoneAreaCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="CitizenshipId">
+      <AttrNames>
+        <Item Value="CitizenshipId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="HomePhoneNumber">
+      <AttrNames>
+        <Item Value="HomePhoneNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="LegalEntityId">
+      <AttrNames>
+        <Item Value="LegalEntityId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="DisplayName">
+      <AttrNames>
+        <Item Value="DisplayName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="WorkPhoneCountryCode">
+      <AttrNames>
+        <Item Value="WorkPhoneCountryCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="PreferredName">
+      <AttrNames>
+        <Item Value="PreferredName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="WorkFaxNumber">
+      <AttrNames>
+        <Item Value="WorkFaxNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="WorkMobilePhoneNumber">
+      <AttrNames>
+        <Item Value="WorkMobilePhoneNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="DriversLicenseId">
+      <AttrNames>
+        <Item Value="DriversLicenseId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="HomePhoneCountryCode">
+      <AttrNames>
+        <Item Value="HomePhoneCountryCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="PersonNumber">
+      <AttrNames>
+        <Item Value="PersonNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="UserName">
+      <AttrNames>
+        <Item Value="UserName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="FirstName">
+      <AttrNames>
+        <Item Value="FirstName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="TerminationDate">
+      <AttrNames>
+        <Item Value="TerminationDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="PassportIssueDate">
+      <AttrNames>
+        <Item Value="PassportIssueDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="NationalId">
+      <AttrNames>
+        <Item Value="NationalId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="Religion">
+      <AttrNames>
+        <Item Value="Religion"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="WorkMobilePhoneAreaCode">
+      <AttrNames>
+        <Item Value="WorkMobilePhoneAreaCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="WorkMobilePhoneExtension">
+      <AttrNames>
+        <Item Value="WorkMobilePhoneExtension"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="HomeFaxNumber">
+      <AttrNames>
+        <Item Value="HomeFaxNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="WorkEmail">
+      <AttrNames>
+        <Item Value="WorkEmail"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="Region2">
+      <AttrNames>
+        <Item Value="Region2"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="MiddleName">
+      <AttrNames>
+        <Item Value="MiddleName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="HomeFaxAreaCode">
+      <AttrNames>
+        <Item Value="HomeFaxAreaCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="DriversLicenseIssuingCountry">
+      <AttrNames>
+        <Item Value="DriversLicenseIssuingCountry"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="HomeFaxCountryCode">
+      <AttrNames>
+        <Item Value="HomeFaxCountryCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="Ethnicity">
+      <AttrNames>
+        <Item Value="Ethnicity"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="WorkMobilePhoneCountryCode">
+      <AttrNames>
+        <Item Value="WorkMobilePhoneCountryCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="EffectiveStartDate">
+      <AttrNames>
+        <Item Value="EffectiveStartDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="ReligionId">
+      <AttrNames>
+        <Item Value="ReligionId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="itemsIterator" id="LastUpdateDate">
+      <AttrNames>
+        <Item Value="LastUpdateDate"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="itemsIterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="itemsIterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="itemsIterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="itemsIterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+  </bindings>
+</pageDefinition>

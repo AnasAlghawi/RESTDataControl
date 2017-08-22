@@ -1,0 +1,20 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="RESTConn" className="oracle.adf.model.connection.rest.RestConnection" credentialStoreKey="RESTConn"
+             xmlns="">
+    <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="RESTConn">
+        <Contents>
+          <restconnection name="RESTConn"
+                          url="https://efgv-dev1.hcm.em3.oraclecloud.com:443/hcmCoreApi/resources/latest">
+            <authentication style="challenge">
+              <type>basic</type>
+            </authentication>
+          </restconnection>
+        </Contents>
+      </XmlRefAddr>
+      <SecureRefAddr addrType="password"/>
+      <SecureRefAddr addrType="username"/>
+    </RefAddresses>
+  </Reference>
+</References>

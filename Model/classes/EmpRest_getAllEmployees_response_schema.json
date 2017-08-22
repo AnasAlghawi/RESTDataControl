@@ -1,0 +1,297 @@
+{
+  "$schema" : "http://www.oracle.com/schema",
+  "id" : "http://www.oracle.com/schema",
+  "type" : "object",
+  "properties" : {
+    "offset" : {
+      "type" : "number"
+    },
+    "count" : {
+      "type" : "number"
+    },
+    "hasMore" : {
+      "type" : "boolean"
+    },
+    "limit" : {
+      "type" : "number"
+    },
+    "links" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "kind" : {
+            "type" : "string"
+          },
+          "rel" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "href" : {
+            "type" : "string"
+          }
+        }
+      },
+      "required" : [ "rel", "href", "name", "kind" ]
+    },
+    "items" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "CitizenshipToDate" : {
+            "type" : "string"
+          },
+          "CreationDate" : {
+            "type" : "string"
+          },
+          "WorkFaxCountryCode" : {
+            "type" : "string"
+          },
+          "LicenseNumber" : {
+            "type" : "string"
+          },
+          "PassportIssuingCountry" : {
+            "type" : "string"
+          },
+          "PassportId" : {
+            "type" : "string"
+          },
+          "Gender" : {
+            "type" : "string"
+          },
+          "PassportExpirationDate" : {
+            "type" : "string"
+          },
+          "NationalIdType" : {
+            "type" : "string"
+          },
+          "HireDate" : {
+            "type" : "string"
+          },
+          "NameSuffix" : {
+            "type" : "string"
+          },
+          "CitizenshipStatus" : {
+            "type" : "string"
+          },
+          "links" : {
+            "type" : "array",
+            "items" : {
+              "type" : "object",
+              "properties" : {
+                "kind" : {
+                  "type" : "string"
+                },
+                "rel" : {
+                  "type" : "string"
+                },
+                "name" : {
+                  "type" : "string"
+                },
+                "href" : {
+                  "type" : "string"
+                },
+                "properties" : {
+                  "type" : "object",
+                  "properties" : {
+                    "changeIndicator" : {
+                      "type" : "string"
+                    }
+                  }
+                }
+              }
+            },
+            "required" : [ "kind", "rel", "name", "href" ]
+          },
+          "HomeFaxExtension" : {
+            "type" : "string"
+          },
+          "DateOfBirth" : {
+            "type" : "string"
+          },
+          "WorkPhoneExtension" : {
+            "type" : "string"
+          },
+          "HomePhoneAreaCode" : {
+            "type" : "string"
+          },
+          "PreviousLastName" : {
+            "type" : "string"
+          },
+          "WorkFaxExtension" : {
+            "type" : "string"
+          },
+          "City" : {
+            "type" : "string"
+          },
+          "WorkFaxAreaCode" : {
+            "type" : "string"
+          },
+          "AddressLine3" : {
+            "type" : "string"
+          },
+          "AddressLine2" : {
+            "type" : "string"
+          },
+          "MaritalStatus" : {
+            "type" : "string"
+          },
+          "AddressLine1" : {
+            "type" : "string"
+          },
+          "PersonId" : {
+            "type" : "number"
+          },
+          "NationalIdCountry" : {
+            "type" : "string"
+          },
+          "DriversLicenseExpirationDate" : {
+            "type" : "string"
+          },
+          "Region" : {
+            "type" : "string"
+          },
+          "Country" : {
+            "type" : "string"
+          },
+          "CitizenshipLegislationCode" : {
+            "type" : "string"
+          },
+          "PassportNumber" : {
+            "type" : "string"
+          },
+          "LastName" : {
+            "type" : "string"
+          },
+          "MilitaryVetStatus" : {
+            "type" : "string"
+          },
+          "WorkPhoneNumber" : {
+            "type" : "string"
+          },
+          "Honors" : {
+            "type" : "string"
+          },
+          "HomePhoneExtension" : {
+            "type" : "string"
+          },
+          "PostalCode" : {
+            "type" : "string"
+          },
+          "NationalIdExpirationDate" : {
+            "type" : "string"
+          },
+          "ProjectedTerminationDate" : {
+            "type" : "string"
+          },
+          "CorrespondenceLanguage" : {
+            "type" : "string"
+          },
+          "Salutation" : {
+            "type" : "string"
+          },
+          "WorkPhoneAreaCode" : {
+            "type" : "string"
+          },
+          "CitizenshipId" : {
+            "type" : "string"
+          },
+          "HomePhoneNumber" : {
+            "type" : "string"
+          },
+          "LegalEntityId" : {
+            "type" : "number"
+          },
+          "DisplayName" : {
+            "type" : "string"
+          },
+          "WorkPhoneCountryCode" : {
+            "type" : "string"
+          },
+          "PreferredName" : {
+            "type" : "string"
+          },
+          "WorkFaxNumber" : {
+            "type" : "string"
+          },
+          "WorkMobilePhoneNumber" : {
+            "type" : "string"
+          },
+          "DriversLicenseId" : {
+            "type" : "string"
+          },
+          "HomePhoneCountryCode" : {
+            "type" : "string"
+          },
+          "PersonNumber" : {
+            "type" : "string"
+          },
+          "UserName" : {
+            "type" : "string"
+          },
+          "FirstName" : {
+            "type" : "string"
+          },
+          "TerminationDate" : {
+            "type" : "string"
+          },
+          "PassportIssueDate" : {
+            "type" : "string"
+          },
+          "NationalId" : {
+            "type" : "string"
+          },
+          "Religion" : {
+            "type" : "string"
+          },
+          "WorkMobilePhoneAreaCode" : {
+            "type" : "string"
+          },
+          "WorkMobilePhoneExtension" : {
+            "type" : "string"
+          },
+          "HomeFaxNumber" : {
+            "type" : "string"
+          },
+          "WorkEmail" : {
+            "type" : "string"
+          },
+          "Region2" : {
+            "type" : "string"
+          },
+          "MiddleName" : {
+            "type" : "string"
+          },
+          "HomeFaxAreaCode" : {
+            "type" : "string"
+          },
+          "DriversLicenseIssuingCountry" : {
+            "type" : "string"
+          },
+          "HomeFaxCountryCode" : {
+            "type" : "string"
+          },
+          "Ethnicity" : {
+            "type" : "string"
+          },
+          "WorkMobilePhoneCountryCode" : {
+            "type" : "string"
+          },
+          "EffectiveStartDate" : {
+            "type" : "string"
+          },
+          "ReligionId" : {
+            "type" : "string"
+          },
+          "LastUpdateDate" : {
+            "type" : "string"
+          }
+        }
+      },
+      "required" : [ "CitizenshipToDate", "CreationDate", "WorkFaxCountryCode", "LicenseNumber", "PassportIssuingCountry", "PassportId", "Gender", "PassportExpirationDate", "NationalIdType", "HireDate", "NameSuffix", "CitizenshipStatus", "links", "HomeFaxExtension", "DateOfBirth", "WorkPhoneExtension", "HomePhoneAreaCode", "PreviousLastName", "WorkFaxExtension", "City", "WorkFaxAreaCode", "AddressLine3", "AddressLine2", "MaritalStatus", "AddressLine1", "PersonId", "NationalIdCountry", "DriversLicenseExpirationDate", "Region", "Country", "CitizenshipLegislationCode", "PassportNumber", "LastName", "MilitaryVetStatus", "WorkPhoneNumber", "Honors", "HomePhoneExtension", "PostalCode", "NationalIdExpirationDate", "ProjectedTerminationDate", "CorrespondenceLanguage", "Salutation", "WorkPhoneAreaCode", "CitizenshipId", "HomePhoneNumber", "LegalEntityId", "DisplayName", "WorkPhoneCountryCode", "PreferredName", "WorkFaxNumber", "WorkMobilePhoneNumber", "DriversLicenseId", "HomePhoneCountryCode", "PersonNumber", "UserName", "FirstName", "TerminationDate", "PassportIssueDate", "NationalId", "Religion", "WorkMobilePhoneAreaCode", "WorkMobilePhoneExtension", "HomeFaxNumber", "WorkEmail", "Region2", "MiddleName", "HomeFaxAreaCode", "DriversLicenseIssuingCountry", "HomeFaxCountryCode", "Ethnicity", "WorkMobilePhoneCountryCode", "EffectiveStartDate", "ReligionId", "LastUpdateDate" ]
+    }
+  }
+}

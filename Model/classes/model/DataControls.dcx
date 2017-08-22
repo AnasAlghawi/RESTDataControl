@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="12.2.1.12.2" id="DataControls"
+                    Package="model">
+  <AdapterDataControl id="EmpRest" FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.rest.RestURLDCDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="false" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="false" Definition="model.EmpRest"
+                      BeanClass="model.EmpRest" xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <Definitions>
+        <Definition xmlns="http://xmlns.oracle.com/adfm/adapter/rest/json" ConnectionName="RESTConn" Source="/emps"
+                    HttpMethod="GET" id="getAllEmployees" MethodRef="JSON"
+                    SchemaLocation="EmpRest_getAllEmployees_response_schema.json" ensureKeyAttribute="true"
+                    dcStructureVersion="2" RootElement="methodReturn"/>
+      </Definitions>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

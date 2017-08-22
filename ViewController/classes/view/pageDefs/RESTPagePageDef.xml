@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.2" id="RESTPagePageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <methodIterator Binds="getAllEmployees.result" DataControl="EmpRest" RangeSize="25"
+                    BeanClass="model.EmpRest.getAllEmployees_Data_methodReturn" id="getAllEmployeesIterator"/>
+    <accessorIterator MasterBinding="getAllEmployeesIterator" Binds="items" RangeSize="25" DataControl="EmpRest"
+                      BeanClass="model.EmpRest.getAllEmployees_Data_methodReturn_items" id="itemsIterator"/>
+    <searchRegion Binds="itemsIterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="itemsQuery"/>
+  </executables>
+  <bindings>
+    <methodAction id="getAllEmployees" RequiresUpdateModel="true" Action="invokeMethod" MethodName="getAllEmployees"
+                  IsViewObjectMethod="false" DataControl="EmpRest" InstanceName="bindings.getAllEmployees.dataControl"
+                  ReturnName="data.EmpRest.methodResults.getAllEmployees_getAllEmployees_dataControl_getAllEmployees_result"/>
+    <tree IterBinding="itemsIterator" id="items">
+      <nodeDefinition DefName="model.EmpRest.getAllEmployees_Data_methodReturn_items" Name="items0">
+        <AttrNames>
+          <Item Value="CitizenshipToDate"/>
+          <Item Value="CreationDate"/>
+          <Item Value="WorkFaxCountryCode"/>
+          <Item Value="LicenseNumber"/>
+          <Item Value="PassportIssuingCountry"/>
+          <Item Value="PassportId"/>
+          <Item Value="Gender"/>
+          <Item Value="PassportExpirationDate"/>
+          <Item Value="NationalIdType"/>
+          <Item Value="HireDate"/>
+          <Item Value="NameSuffix"/>
+          <Item Value="CitizenshipStatus"/>
+          <Item Value="HomeFaxExtension"/>
+          <Item Value="DateOfBirth"/>
+          <Item Value="WorkPhoneExtension"/>
+          <Item Value="HomePhoneAreaCode"/>
+          <Item Value="PreviousLastName"/>
+          <Item Value="WorkFaxExtension"/>
+          <Item Value="City"/>
+          <Item Value="WorkFaxAreaCode"/>
+          <Item Value="AddressLine3"/>
+          <Item Value="AddressLine2"/>
+          <Item Value="MaritalStatus"/>
+          <Item Value="AddressLine1"/>
+          <Item Value="PersonId"/>
+          <Item Value="NationalIdCountry"/>
+          <Item Value="DriversLicenseExpirationDate"/>
+          <Item Value="Region"/>
+          <Item Value="Country"/>
+          <Item Value="CitizenshipLegislationCode"/>
+          <Item Value="PassportNumber"/>
+          <Item Value="LastName"/>
+          <Item Value="MilitaryVetStatus"/>
+          <Item Value="WorkPhoneNumber"/>
+          <Item Value="Honors"/>
+          <Item Value="HomePhoneExtension"/>
+          <Item Value="PostalCode"/>
+          <Item Value="NationalIdExpirationDate"/>
+          <Item Value="ProjectedTerminationDate"/>
+          <Item Value="CorrespondenceLanguage"/>
+          <Item Value="Salutation"/>
+          <Item Value="WorkPhoneAreaCode"/>
+          <Item Value="CitizenshipId"/>
+          <Item Value="HomePhoneNumber"/>
+          <Item Value="LegalEntityId"/>
+          <Item Value="DisplayName"/>
+          <Item Value="WorkPhoneCountryCode"/>
+          <Item Value="PreferredName"/>
+          <Item Value="WorkFaxNumber"/>
+          <Item Value="WorkMobilePhoneNumber"/>
+          <Item Value="DriversLicenseId"/>
+          <Item Value="HomePhoneCountryCode"/>
+          <Item Value="PersonNumber"/>
+          <Item Value="UserName"/>
+          <Item Value="FirstName"/>
+          <Item Value="TerminationDate"/>
+          <Item Value="PassportIssueDate"/>
+          <Item Value="NationalId"/>
+          <Item Value="Religion"/>
+          <Item Value="WorkMobilePhoneAreaCode"/>
+          <Item Value="WorkMobilePhoneExtension"/>
+          <Item Value="HomeFaxNumber"/>
+          <Item Value="WorkEmail"/>
+          <Item Value="Region2"/>
+          <Item Value="MiddleName"/>
+          <Item Value="HomeFaxAreaCode"/>
+          <Item Value="DriversLicenseIssuingCountry"/>
+          <Item Value="HomeFaxCountryCode"/>
+          <Item Value="Ethnicity"/>
+          <Item Value="WorkMobilePhoneCountryCode"/>
+          <Item Value="EffectiveStartDate"/>
+          <Item Value="ReligionId"/>
+          <Item Value="LastUpdateDate"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
